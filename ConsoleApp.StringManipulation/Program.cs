@@ -16,7 +16,7 @@ Console.WriteLine($"{nameof(s4)}: {s4}");
 
 // Initialize as an empty string.
 string s5 = string.Empty;
-string s6 = "";
+string s6 = " ";
 Console.WriteLine($"{nameof(s5)}: {s5}");
 Console.WriteLine($"{nameof(s6)}: {s6}");
 
@@ -60,6 +60,35 @@ Console.WriteLine($"{nameof(newString)}: {newString}");
 Console.WriteLine($"{nameof(newString1)}: {newString1}");
 Console.WriteLine($"{nameof(newString2)}: {newString2}");
 
-/* String manipulation methods */
+/* String manipulation methods and properties. Sometimes it's just assessment. */
+
+// Null or empty checks
+// find the length of a string
+Console.WriteLine($"{nameof(s1)} has a length of {s1.Length}");
+Console.WriteLine($"{nameof(s6)} has a length of {s6.Length}");
+// Console.WriteLine($"{nameof(s4)} has a length of {s4.Length}"); // Will cause null exception
+// Console.WriteLine($"{nameof(s5)} has a length of {s5.Length}");
+
+// if (string.IsNullOrEmpty(s4) == false)
+if(!string.IsNullOrEmpty(s4))
+{
+    Console.WriteLine($"{nameof(s4)} has a length of {s4.Length}");
+}
+
+if(string.IsNullOrEmpty(s5) == false)
+{
+    Console.WriteLine($"{nameof(s5)} has a length of {s5.Length}");
+}
 
 // Substrings
+string subString = s1.Substring(5);
+Console.WriteLine($"{nameof(subString)}: {subString}");
+subString = s1.Substring(5, 5);
+Console.WriteLine($"{nameof(subString)}: {subString}");
+
+// Splitting strings
+var splitStrings = s2.Split(' ');
+for (int i = 0; i < splitStrings.Length; i++)
+{
+    Console.WriteLine(splitStrings[i]);
+}
