@@ -92,3 +92,20 @@ for (int i = 0; i < splitStrings.Length; i++)
 {
     Console.WriteLine(splitStrings[i]);
 }
+
+// Replace
+string replacements1 = s1.Replace('s', 'V');
+Console.WriteLine($"{nameof(replacements1)}: {replacements1}");
+
+string replacements2 = s1.Replace("string", "chicken");
+Console.WriteLine($"{nameof(replacements2)}: {replacements2}");
+
+// Convert to string
+string salary = 4789654123.02.ToString();
+int value = 74185296;
+string strValue = value.ToString();
+
+// Changing Formatting
+// For further reference: https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#standard-format-specifiers
+Console.WriteLine($"{nameof(salary)} : {salary:C}");
+Console.WriteLine(nameof(salary)+ ": " + value.ToString("C"));
