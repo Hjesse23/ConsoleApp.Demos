@@ -58,28 +58,28 @@ void PrintNameNullableParam(string? name, int? count)
 }
 
 /* Function Calls */
-// PrintName();
+PrintName();
 
-// int fiveYearsAgo = GetFiveYearsAgo();
-// Console.WriteLine("Five years ago was " + fiveYearsAgo);
+int fiveYearsAgo = GetFiveYearsAgo();
+Console.WriteLine("Five years ago was " + fiveYearsAgo);
 
-// Console.WriteLine("Enter your name");
-// string name1 = Console.ReadLine();
-// PrintNameWithParams(name1);
+Console.WriteLine("Enter your name");
+string name1 = Console.ReadLine();
+PrintNameWithParams(name1);
 
-// Console.WriteLine("Enter a year");
-// int pastYear = Convert.ToInt32(Console.ReadLine());
-// int yearsAgo = GetYearDifferenceWithParams(pastYear);
-// Console.WriteLine("This was " + yearsAgo + " years ago");
+Console.WriteLine("Enter a year");
+int pastYear = Convert.ToInt32(Console.ReadLine());
+int yearsAgo = GetYearDifferenceWithParams(pastYear);
+Console.WriteLine("This was " + yearsAgo + " years ago");
 
-// Console.WriteLine("Enter number of years in the future or past");
-// int numberOfYears = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number of years in the future or past");
+int numberOfYears = Convert.ToInt32(Console.ReadLine());
 
-// var pastYear1 = GetFutureOrPastYear();
-// Console.WriteLine("The year is: " + pastYear1);
+var pastYear1 = GetFutureOrPastYear();
+Console.WriteLine("The year is: " + pastYear1);
 
-// var pastYear2 = GetFutureOrPastYear(numberOfYears);
-// Console.WriteLine("The year is: " + pastYear2);
+var pastYear2 = GetFutureOrPastYear(numberOfYears);
+Console.WriteLine("The year is: " + pastYear2);
 
 PrintNameNullableParam(null, null);
 PrintNameNullableParam("Chester", 5);
