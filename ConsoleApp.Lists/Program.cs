@@ -2,7 +2,11 @@
 
 // Declare a list
 List<int> grades = new List<int>();
+List<string> students = new List<string>();
 int grade = 0;
+string name;
+int gradeCount = 0;
+int @continue;
 // var grades = new List<int>();
 // List<int> grades = new();
 
@@ -14,24 +18,37 @@ int grade = 0;
 
 do
 {
+    gradeCount += 1;
+    Console.Write("Enter Student Name: ");
+    name = Console.ReadLine();
+    students.Add(name);
+
     Console.Write("Enter Grade: ");
     grade = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Do you wish to continue? (1 = yes | 2 = no): ");
+    @continue = Convert.ToInt32(Console.ReadLine());
     if (grade != -1)
     {
         grades.Add(grade);
     }
-} while (grade != -1);
+} while (@continue == 1);
 
 // Print values in list - for
+Console.WriteLine("The Grades you have entered are:");
+for (int i = 0; i < gradeCount; i++)
+{
+    Console.WriteLine($"{students[i]}: {grades[i]}");
+}
 Console.WriteLine("Printing grades via for loop");
-for (int i = 0; i < grades.Count; i++)
-{
-    Console.WriteLine(grades[i]);
-}
+// for (int i = 0; i < grades.Count; i++)
+// {
+//     Console.WriteLine(grades[i]);
+// }
 
-// Print values in list - foreach
-Console.WriteLine("Printing grades via foreach loop");
-foreach (int g in grades)
-{
-    Console.WriteLine(g);
-}
+// // Print values in list - foreach
+// Console.WriteLine("Printing grades via foreach loop");
+// foreach (int g in grades)
+// {
+//     Console.WriteLine(g);
+// }
